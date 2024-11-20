@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="personalWebpageApp" ng-controller="MainController">
+    <header>
+        <h1>{{personalInfo.name}}</h1>
+        <p>{{personalInfo.tagline}}</p>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <p>{{personalInfo.about}}</p>
+    </section>
+    <section>
+        <h2>My Hobbies</h2>
+        <ul>
+            <li ng-repeat="hobby in personalInfo.hobbies">{{hobby}}</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Native Place</h2>
+        <p>{{personalInfo.nativePlace}}</p>
+    </section>
+    <section>
+        <h2>Family Members</h2>
+        <ul>
+            <li ng-repeat="member in personalInfo.familyMembers">{{member}}</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li ng-repeat="education in personalInfo.education">{{education}}</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Certificates and Rewards</h2>
+        <ul>
+            <li ng-repeat="cert in personalInfo.certificates">{{cert}}</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Contributions to Society</h2>
+        <p>{{personalInfo.contributions}}</p>
+    </section>
+</body>
+</html>
